@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 function FAQs() {
+  const [showIndex, setShowIndex] = useState(0);
+
   const faqs = [
     {
       question: "What types of cars are available for rent?",
@@ -20,6 +24,9 @@ function FAQs() {
     },
   ];
 
+  function handleFaq(i) {
+    showIndex == i ? setShowIndex(null) : setShowIndex(i);
+  }
   return (
     <div className="bg-primary-bg py-14 px-4 text-center text-gray-200">
       <h3 className="font-semibold mb-2 tracking-7">FAQ</h3>
@@ -30,52 +37,101 @@ function FAQs() {
         Frequently asked questions about the car rental booking process on our
         website. Answers to common concerns and inqueiries
       </p>
+      {/* <div className="text-justify mt-14">
+        {faqs.map((faq, i) => (
+          <div key={i}>
+                
+                <div onClick={() => handleFaq(i)}  className="flex justify-between">
+              <p className="">
+                {i + 1}.{faqs[i].question}
+              </p>
+              <svg
+                className="fill-color-primary h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+              >
+                <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"></path>
+              </svg>
+            </div>
+            <p className="text-sm text-gray-400 pl-4  pt-1 pb-3">
+              {showIndex == i && faqs[i].answer}
+            </p>
+          </div>
+        ))}
+
+      </div> */}
+      {/* <div className="text-justify mt-14">
+        {faqs.map((faq, i) => (
+          <div key={i}>
+            <div
+              onClick={() => handleFaq(i)}
+              className={`flex justify-between gap-4 cursor-pointer h-12 px-3 ${
+                showIndex == i ? "bg-color-primary text-gray-900" : ""
+              } `}
+            >
+              <p>
+                {i + 1}. {faq.question}
+              </p>
+              <svg
+                className={`fill-color-primary h-6 w-6  transform transition-transform duration-500 ${
+                  showIndex === i ? "rotate-180 fill-gray-900" : ""
+                }`}
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+              >
+                <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"></path>
+              </svg>
+            </div>
+
+            <div
+              className={`overflow-hidden transition-[height] duration-700 ${
+                showIndex === i ? "h-auto" : "h-0"
+              }`}
+            >
+              <p className="text-sm text-gray-400 pl-4 pt-1 pb-3">
+                {faq.answer}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div> */}
       <div className="text-justify mt-14">
-        <div>
-          <div className="flex justify-between">
-            <p className="">1.{faqs[0].question}</p>
-            <svg
-              className="fill-color-primary h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
+        {faqs.map((faq, i) => (
+          <div key={i} className="border-b border-gray-700 py-2">
+            {/* Question Header */}
+            <div
+              onClick={() => handleFaq(i)}
+              //   className="flex justify-between cursor-pointer"
+              className={`flex justify-between gap-4 cursor-pointer h-12 px-3 ${
+                showIndex == i ? "bg-color-primary text-gray-900" : ""
+              } `}
             >
-              <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"></path>
-            </svg>
-          </div>
-          <p className="text-sm text-gray-400 pl-4  pt-1 pb-3">
-            {faqs[0].answer}
-          </p>
-        </div>
-        <div>
-          <div className="flex justify-between">
-            <p className="">2.{faqs[1].question}</p>
-            <svg
-              className="fill-color-primary h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
+              <p>
+                {i + 1}. {faq.question}
+              </p>
+              <svg
+                className={`fill-color-primary h-6 w-6 transform transition-transform duration-200 ${
+                  showIndex === i ? "rotate-180 fill-gray-900" : ""
+                }`}
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+              >
+                <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"></path>
+              </svg>
+            </div>
+
+            {/* Answer Section with Smooth Transition */}
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                showIndex === i ? "max-h-40" : "max-h-0"
+              }`}
             >
-              <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"></path>
-            </svg>
+              <p className="text-sm text-gray-400 pl-4 pt-2 pb-3">
+                {faq.answer}
+              </p>
+            </div>
           </div>
-          <p className="text-sm text-gray-400 pl-4 pt-1 pb-3">
-            {faqs[1].show && faqs[1].answer}
-          </p>
-        </div>
-        <div>
-          <div className="flex justify-between">
-            <p className="">3.{faqs[2].question}</p>
-            <svg
-              className="fill-color-primary h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-            >
-              <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"></path>
-            </svg>
-          </div>
-          <p className="text-sm text-gray-400 pl-4 pt-1 pb-3">
-            {faqs[2].show && faqs[2].answer}
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   );
