@@ -24,7 +24,7 @@ function VehicleModels() {
       <img src="/assets/hero.png" alt="Car" className="w-70" />
       <div className="flex flex-col mt-14 mx-2">
         <div className="table-cell bg-color-primary text-gray-700">
-          <span className="text-xl font-bold">$35</span> /
+          <span className="text-xl font-bold">3500 ETB</span> /
           <span>rent per day </span>
         </div>
         <div className="table-cell">

@@ -5,7 +5,8 @@ export default {
     extend: {
       colors: {
         "primary-bg": "#0f172a",
-        "color-primary": "#00FFFF",
+        "color-primary": "#11d8c7",
+        // "color-primary": "#00FFFF",
         "color-primary-light": "#00FFFF20",
       },
     },

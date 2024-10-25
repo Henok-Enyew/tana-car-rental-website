@@ -5,6 +5,8 @@ import Booking from "./Booking";
 import BookingGuide from "./BookingGuide";
 import VehicleModels from "./VehicleModels";
 import WhyUs from "./WhyUs";
+import Testimonial from "./Testimonial";
+import FAQs from "./FAQs";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
               <BookingGuide />
               <VehicleModels />
               <WhyUs />
+              <Testimonial />
+              <FAQs />
             </>
           }
         ></Route>
