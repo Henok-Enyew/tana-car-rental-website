@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,6 +14,26 @@
 
 .table-cell {
   @apply border-[1px] border-gray-400 py-2 px-6 flex  items-center justify-between border-b-0;
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+  @apply bg-primary-bg text-gray-200 rounded-md pr-2 w-56 h-16;
+}
+
+.leaflet-popup .leaflet-popup-content {
+  @apply text-sm flex items-center gap-2;
+}
+
+.leaflet-popup .leaflet-popup-content span:first-child {
+  @apply text-lg;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  @apply bg-primary-bg;
+}
+
+.leaflet-popup-content-wrapper {
+  @apply border-l-4 border-color-primary;
 }
 
 /*

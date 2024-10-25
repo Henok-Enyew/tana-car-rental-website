@@ -22,7 +22,7 @@ function Booking() {
           id=""
           className="bg-primary-bg text-gray-400 border-b-[1px] border-gray-500 rounded-sm mb-6 w-60"
         >
-          <option value="" selected>
+          <option value="" selected={true}>
             Select your car type
           </option>
           <option value="">Toyota Land Cruiser</option>

@@ -7,6 +7,8 @@ import VehicleModels from "./VehicleModels";
 import WhyUs from "./WhyUs";
 import Testimonial from "./Testimonial";
 import FAQs from "./FAQs";
+import Footer from "./Footer";
+import BranchesMap from "./BranchesMap";
 
 function App() {
   return (
@@ -21,8 +23,10 @@ function App() {
               <BookingGuide />
               <VehicleModels />
               <WhyUs />
+              <BranchesMap />
               <Testimonial />
               <FAQs />
+              <Footer />
             </>
           }
         ></Route>
