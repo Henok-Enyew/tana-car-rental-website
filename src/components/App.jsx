@@ -12,6 +12,7 @@ import GoUp from "./GoUp";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import { useEffect } from "react";
+import { CarProvider } from "../contexts/CarProvider";
 
 function App() {
   // useEffect(() => {
@@ -28,18 +29,20 @@ function App() {
   }, []);
 
   return (
-    <div className="relative bg-primary-bg">
-      <Homepage />
-      <Booking />
-      <BookingGuide />
-      <VehicleModels />
-      <WhyUs />
-      <BranchesMap />
-      <Testimonial />
-      <FAQs />
-      <Footer />
-      <GoUp />
-    </div>
+    <CarProvider>
+      <div className="relative bg-primary-bg">
+        <Homepage />
+        <Booking />
+        <BookingGuide />
+        <VehicleModels />
+        <WhyUs />
+        <BranchesMap />
+        <Testimonial />
+        <FAQs />
+        <Footer />
+        <GoUp />
+      </div>
+    </CarProvider>
 
     // <BrowserRouter>
     //   <Routes>

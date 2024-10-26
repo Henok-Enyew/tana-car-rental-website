@@ -30,9 +30,9 @@ function Hero() {
       <ButtonBookRide />
       <ButtonLearnMore />
       <img
-        src="/assets/hero.png"
+        src="/assets/cars/toyota-RAV4.png"
         alt="Car"
-        className="w-70"
+        className="w-70 my-6 "
         data-aos="fade-up"
         data-aos-duration="600"
       />

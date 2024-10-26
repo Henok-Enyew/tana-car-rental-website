@@ -1,7 +1,14 @@
+import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useCar } from "../contexts/CarProvider";
 
 function Booking() {
+  const { cars, selectedCar, setSelectedCar } = useCar();
+  const [pickUpDate, setPickUpDate] = useState(new Date());
+  const [dropOffDate, setDropOffDate] = useState(new Date());
+  const [pickUpLocation, setPickUpLocation] = useState(null);
+  const [dropOffLocation, setDropOffLocation] = useState(null);
   return (
     <div className="bg-primary-bg px-6" id="booking">
       <h2 className="font-semibold text-xl text-gray-200 pb-4">Book a car</h2>
@@ -25,20 +32,16 @@ function Booking() {
           name=""
           id=""
           className="bg-primary-bg text-gray-400 border-b-[1px] border-gray-500 rounded-sm mb-6 w-60"
+          onChange={(e) => setSelectedCar(JSON.parse(e.target.value))}
         >
-          <option value="" selected>
+          <option value={selectedCar} selected>
             Select your car type
           </option>
-          <option value="">Toyota Land Cruiser</option>
-          <option value="">Toyota Prado</option>
-          <option value="">Mitsubishi Pajero</option>
-          <option value="">Nissan Patrol</option>
-          <option value="">Toyota RAV4</option>
-          <option value="">Hyundai Santa Fe</option>
-          <option value="">Ford Everest</option>
-          <option value="">Toyota Hiace</option>
-          <option value="">Hyundai H1</option>
-          <option value="">Mercedes-Benz E-Class</option>
+          {cars.map((car) => (
+            <option value={JSON.stringify(car)} key={car.id}>
+              {car.name}
+            </option>
+          ))}
         </select>
 
         <label
@@ -59,20 +62,19 @@ function Booking() {
           name=""
           id=""
           className="bg-primary-bg text-gray-400 border-b-[1px] border-gray-500 rounded-sm w-60 mb-6 "
+          onChange={(e) => setPickUpLocation(e.target.value)}
         >
           <option value="" selected>
             Select your pick up location
           </option>
-          <option value="">Addis Ababa</option>
-          <option value="">Bahir Dar</option>
-          <option value="">Gondar</option>
-          <option value="">Hawassa</option>
-          <option value="">Dire Dawa</option>
-          <option value="">Mekelle</option>
-          <option value="">Adama</option>
-          <option value="">Harar</option>
-          <option value="">Jimma</option>
-          <option value="">Axum</option>
+          <option value="addisabeba">Addis Ababa</option>
+          <option value="bahirdar">Bahir Dar</option>
+          <option value="gondar">Gondar</option>
+          <option value="hawassa">Hawassa</option>
+          <option value="diredawa">Dire Dawa</option>
+          <option value="mekelle">Mekelle</option>
+          <option value="adama">Adama</option>
+          <option value="jimma">Jimma</option>
         </select>
         <label
           data-aos="fade-up"
@@ -92,20 +94,19 @@ function Booking() {
           name=""
           id=""
           className="bg-primary-bg text-gray-400 border-b-[1px] border-gray-500 rounded-sm w-60 mb-6 "
+          onChange={(e) => setDropOffLocation(e.target.value)}
         >
           <option value="" selected>
             Select your drop off location
           </option>
-          <option value="">Addis Ababa</option>
-          <option value="">Bahir Dar</option>
-          <option value="">Gondar</option>
-          <option value="">Hawassa</option>
-          <option value="">Dire Dawa</option>
-          <option value="">Mekelle</option>
-          <option value="">Adama</option>
-          <option value="">Harar</option>
-          <option value="">Jimma</option>
-          <option value="">Axum</option>
+          <option value="addisabeba">Addis Ababa</option>
+          <option value="bahirdar">Bahir Dar</option>
+          <option value="gondar">Gondar</option>
+          <option value="hawassa">Hawassa</option>
+          <option value="diredawa">Dire Dawa</option>
+          <option value="mekelle">Mekelle</option>
+          <option value="adama">Adama</option>
+          <option value="jimma">Jimma</option>
         </select>
         <label
           data-aos="fade-up"
@@ -123,9 +124,10 @@ function Booking() {
         </label>
         <DatePicker
           className="bg-primary-bg text-gray-400 border-b-[1px] border-gray-500 rounded-sm w-60 mb-6 "
-          selected={new Date()}
-          // onChange={(date) => setStartDate(date)}
+          selected={pickUpDate}
+          onChange={(date) => setPickUpDate(date)}
           dateFormat="yyyy/MM/dd"
+          minDate={new Date()}
         />
         <label
           data-aos="fade-up"
@@ -143,16 +145,17 @@ function Booking() {
         </label>
         <DatePicker
           className="bg-primary-bg text-gray-400 border-b-[1px] border-gray-500 rounded-sm w-60 mb-6 "
-          selected={new Date()}
-          // onChange={(date) => setStartDate(date)}
+          onChange={(date) => setDropOffDate(date)}
+          selected={dropOffDate}
           dateFormat="yyyy/MM/dd"
+          minDate={new Date()}
         />
-        <button
-          type="submit"
-          className="bg-color-primary text-gray-900 px-12 py-2 mb-2 w-60 text-lg "
+        <a
+          href="#models"
+          className="bg-color-primary  text-gray-900 px-12 py-2 mb-2 w-60 text-lg flex justify-center items-center "
         >
           Search
-        </button>
+        </a>
       </form>
     </div>
   );

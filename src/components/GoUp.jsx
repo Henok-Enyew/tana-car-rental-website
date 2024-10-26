@@ -2,7 +2,7 @@ function GoUp() {
   return (
     <a
       href="#home"
-      className="fixed bottom-4 right-4 bg-gray-900  rounded-full border-[1px] border-color-primary-l "
+      className="fixed bottom-8 right-8 bg-gray-900  rounded-full border-[1px] border-color-primary-l "
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

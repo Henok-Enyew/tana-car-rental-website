@@ -1,4 +1,15 @@
+import { useEffect } from "react";
+import { useCar } from "../contexts/CarProvider";
+import ClipLoader from "react-spinners/ClipLoader";
 function VehicleModels() {
+  const { selectedCar, isLoading, setLoading, setSelectedCar, cars } = useCar();
+  useEffect(
+    function () {
+      selectedCar !== null && setLoading(true);
+    },
+    [selectedCar, setLoading]
+  );
+
   return (
     <div
       className="bg-primary-bg pb-14 px-4 text-center text-gray-200"
@@ -17,59 +28,77 @@ function VehicleModels() {
       </p>
       <div
         data-aos="fade-zoom-in"
-        className="flex flex-col pl-4 justify-center  mt-8"
+        className="flex flex-col pl-4 justify-center  mt-8 mb-16"
       >
-        <button className="btn-vehicle ">Toyota Land Cruiser</button>
-        <button className="btn-vehicle">Toyota Prado</button>
-        <button className="btn-vehicle">Mitsubishi Pajero</button>
-        <button className="btn-vehicle">Nissan Patrol</button>
-        <button className="btn-vehicle">Toyota RAV4</button>
-        <button className="btn-vehicle">Hyundai Santa</button>
-        <button className="btn-vehicle">Ford Everest</button>
-        <button className="btn-vehicle">Toyota Hiace</button>
-        <button className="btn-vehicle">Hyundai H1</button>
-        <button className="btn-vehicle !border-b-[1px]">
-          Mercedes-Benz E-
-        </button>
+        {cars.map((car) => (
+          <button
+            className={`border-[1px] border-gray-500 border-b-[0] px-4 py-2 w-64 text-start font-semibold transition-all duration-300 hover:bg-color-primary hover:text-gray-800 ${
+              car.id === selectedCar.id && "text-gray-800 bg-color-primary"
+            } ${car.id == 8 && "!border-b-[1px]"}`}
+            key={car.id}
+            onClick={() => setSelectedCar(car)}
+          >
+            {car.name}
+          </button>
+        ))}
       </div>
-      <img
-        data-aos="fade-up"
-        src="/assets/hero.png"
-        alt="Car"
-        className="w-70"
-      />
+
+      <div className="h-60 ">
+        <ClipLoader
+          color="#11d8c7"
+          loading={isLoading}
+          size={150}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+          // className="absolute left-20 top-20"
+        />
+        <img
+          // data-aos="fade-up"
+          src={`${selectedCar.src}`}
+          alt={`${selectedCar.name}`}
+          onLoad={() => setLoading(false)}
+          className={`w-70 transition-opacity duration-500 ${
+            isLoading ? "hidden" : "0"
+          }`}
+        />
+      </div>
       <div data-aos="fade-zoom-in" className="flex flex-col mt-14 mx-2">
         <div className="table-cell bg-color-primary text-gray-700">
-          <span className="text-xl font-bold">3500 ETB</span> /
-          <span>rent per day </span>
+          <span className="text-xl font-bold">
+            {selectedCar.rent_per_day} ETB
+          </span>{" "}
+          /<span>rent per day </span>
         </div>
         <div className="table-cell">
           <span>Model</span>
-          <span>320</span>
+          <span>{selectedCar.model}</span>
         </div>
         <div className="table-cell">
           <span>Mark</span>
-          <span>BMW</span>
+          <span>{selectedCar.mark}</span>
         </div>
         <div className="table-cell">
           <span>Year</span>
-          <span>2012</span>
+          <span>{selectedCar.year}</span>
         </div>
         <div className="table-cell">
           <span>Doors</span>
-          <span>4/5</span>
+          <span>{selectedCar.doors}</span>
         </div>
         <div className="table-cell">
-          <span>AC</span> <span>Yes</span>
+          <span>AC</span> <span>{selectedCar.AC}</span>
         </div>
         <div className="table-cell">
           <span>Transmission</span>
-          <span>Manual</span>
+          <span>{selectedCar.transmission}</span>
         </div>
         <div className="table-cell !border-b-[1px]">
           <span>Fuel</span>
-          <span>Diesel</span>
+          <span>{selectedCar.fuel}</span>
         </div>
+        <button className="bg-color-primary text-gray-900 mt-3 py-2 uppercase textxl font-semibold">
+          Reserve now
+        </button>
       </div>
     </div>
   );

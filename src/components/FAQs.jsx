@@ -53,7 +53,7 @@ function FAQs() {
               onClick={() => handleFaq(i)}
               //   className="flex justify-between cursor-pointer"
               className={`flex justify-between gap-4 cursor-pointer h-12 px-3 ${
-                showIndex == i ? "bg-color-primary text-gray-900" : ""
+                showIndex == i ? "border-b-4 border-color-primary-l " : ""
               } `}
             >
               <p>

@@ -40,6 +40,18 @@ const branches = [
     name: "Dire Dawa",
     position: [9.601934729613406, 41.84597969055176],
   },
+  {
+    name: "Adama",
+    position: [8.538923421610123, 39.27200317382813],
+  },
+  {
+    name: "Jimma",
+    position: [7.671524501131187, 36.84076309204102],
+  },
+  {
+    name: "Hawassa",
+    position: [7.049104960505505, 38.481674194335945],
+  },
 ];
 
 function BranchesMap() {

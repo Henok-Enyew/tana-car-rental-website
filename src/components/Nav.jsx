@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 function Nav() {
   const [showNav, setShowNav] = useState(false);
 
@@ -19,6 +19,13 @@ function Nav() {
                : "-translate-x-full opacity-0"
            } `}
       >
+        <a href="#home">
+          <img
+            src="/assets/logo.png"
+            alt=""
+            className="w-28 absolute top-10 left-10"
+          />
+        </a>
         <a onClick={() => setShowNav(false)} href="#home">
           Home
         </a>
