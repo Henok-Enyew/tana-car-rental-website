@@ -7,18 +7,11 @@ function WhyUs() {
         </h2>
         <p data-aos="fade-up" className="text-gray-400 tracking-wider">
           Top airports, local suppliers,{" "}
-          <span
-            className="text-color-primary "
-            data-aos="zooom-out"
-            data-aos-duration="1200"
-          >
-            24/7
-          </span>{" "}
-          support
+          <span className="text-color-primary ">24/7</span> support
         </p>
       </div>
       <img
-        data-aos="zooom-out-down"
+        data-aos="zooom-in"
         src="/assets/cars.png"
         alt="Cars"
         className="w-90 mx-auto my-10"

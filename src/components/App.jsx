@@ -14,15 +14,21 @@ import "aos/dist/aos.css"; // Import AOS styles
 import { useEffect } from "react";
 
 function App() {
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000, // Animation duration in ms
+  //     once: false, // Only animate once per element
+  //   });
+  // }, []);
+
   useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration in ms
-      once: false, // Only animate once per element
-    });
+    AOS.init({ duration: 1000, once: false });
+    window.addEventListener("scroll", AOS.refresh); // Refresh AOS on scroll
+    return () => window.removeEventListener("scroll", AOS.refresh);
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative bg-primary-bg">
       <Homepage />
       <Booking />
       <BookingGuide />
