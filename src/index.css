@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+@import url("https://unpkg.com/aos@2.3.1/dist/aos.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +9,7 @@
   font-family: "Rubik", sans-serif;
 }
 
-body {
+html {
   @apply !scroll-smooth;
   /* scroll-behavior: smooth; */
 }

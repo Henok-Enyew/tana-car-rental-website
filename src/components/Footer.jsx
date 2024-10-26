@@ -1,6 +1,7 @@
 function Footer() {
   return (
     <div
+      data-aos="fade-up"
       className="bg-gray-950 py-5 px-4 text-gray-400 text-sm grid grid-cols-3 gap-2
     "
     >

@@ -4,13 +4,21 @@ function VehicleModels() {
       className="bg-primary-bg pb-14 px-4 text-center text-gray-200"
       id="models"
     >
-      <h3 className="font-semibold mb-2">Vehicle Models</h3>
-      <h2 className="font-semibold text-3xl mb-5"> Our rental fleet</h2>
-      <p className="text-xs px-3 text-gray-400">
+      <h3 data-aos="fade-up" className="font-semibold mb-2">
+        Vehicle Models
+      </h3>
+      <h2 data-aos="fade-up" className="font-semibold text-3xl mb-5">
+        {" "}
+        Our rental fleet
+      </h2>
+      <p data-aos="fade-up" className="text-xs px-3 text-gray-400">
         Choose from a variety of our amazing vehicles to rent for your next
         adventure or business trip{" "}
       </p>
-      <div className="flex flex-col pl-4 justify-center  mt-8">
+      <div
+        data-aos="fade-zoom-in"
+        className="flex flex-col pl-4 justify-center  mt-8"
+      >
         <button className="btn-vehicle ">Toyota Land Cruiser</button>
         <button className="btn-vehicle">Toyota Prado</button>
         <button className="btn-vehicle">Mitsubishi Pajero</button>
@@ -24,8 +32,13 @@ function VehicleModels() {
           Mercedes-Benz E-
         </button>
       </div>
-      <img src="/assets/hero.png" alt="Car" className="w-70" />
-      <div className="flex flex-col mt-14 mx-2">
+      <img
+        data-aos="fade-up"
+        src="/assets/hero.png"
+        alt="Car"
+        className="w-70"
+      />
+      <div data-aos="fade-zoom-in" className="flex flex-col mt-14 mx-2">
         <div className="table-cell bg-color-primary text-gray-700">
           <span className="text-xl font-bold">3500 ETB</span> /
           <span>rent per day </span>

@@ -4,8 +4,13 @@ function BookingGuide() {
       className="bg-primary-bg py-14 px-4 text-center text-gray-200"
       id="guide"
     >
-      <h3 className="font-semibold mb-2">Plan your trip now</h3>
-      <h2 className="font-semibold text-3xl mb-16"> Quick & easy car rental</h2>
+      <h3 data-aos="fade-up" className="font-semibold mb-2">
+        Plan your trip now
+      </h3>
+      <h2 data-aos="fade-up" className="font-semibold text-3xl mb-16">
+        {" "}
+        Quick & easy car rental
+      </h2>
 
       <div className="flex flex-col items-center justify-center w-full">
         <Guide
@@ -93,7 +98,10 @@ function BookingGuide() {
 
 function Guide({ icon, header, body }) {
   return (
-    <div className="flex flex-col items-center justify-center w-full mb-20">
+    <div
+      data-aos="fade-up"
+      className="flex flex-col items-center justify-center w-full mb-20"
+    >
       <div className="bg-color-primary-light z-10 w-fit p-3 rounded-full mb-8">
         {icon}
       </div>

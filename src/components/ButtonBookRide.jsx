@@ -4,6 +4,7 @@ function ButtonBookRide() {
       href="#booking"
       className="bg-color-primary text-gray-900 flex items-center gap-3 px-12 py-2 mb-2
     "
+      data-aos="fade-right"
     >
       Book Ride
       <svg

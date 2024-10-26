@@ -7,7 +7,11 @@ function Booking() {
       <h2 className="font-semibold text-xl text-gray-200 pb-4">Book a car</h2>
 
       <form action="">
-        <label className="font-semibold flex text-gray-200 gap-3 pb-3 ">
+        <label
+          data-aos="fade-up"
+          data-aos-duration="600"
+          className="font-semibold flex text-gray-200 gap-3 pb-3 "
+        >
           <svg
             className="fill-color-primary h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +41,11 @@ function Booking() {
           <option value="">Mercedes-Benz E-Class</option>
         </select>
 
-        <label className="font-semibold flex text-gray-200 gap-3 pb-3 ">
+        <label
+          data-aos="fade-up"
+          data-aos-duration="600"
+          className="font-semibold flex text-gray-200 gap-3 pb-3 "
+        >
           <svg
             className="fill-color-primary h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +74,11 @@ function Booking() {
           <option value="">Jimma</option>
           <option value="">Axum</option>
         </select>
-        <label className="font-semibold flex text-gray-200 gap-3 pb-3 ">
+        <label
+          data-aos="fade-up"
+          data-aos-duration="600"
+          className="font-semibold flex text-gray-200 gap-3 pb-3 "
+        >
           <svg
             className="fill-color-primary h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +107,11 @@ function Booking() {
           <option value="">Jimma</option>
           <option value="">Axum</option>
         </select>
-        <label className="font-semibold flex text-gray-200 gap-3 pb-3 ">
+        <label
+          data-aos="fade-up"
+          data-aos-duration="600"
+          className="font-semibold flex text-gray-200 gap-3 pb-3 "
+        >
           <svg
             className="fill-color-primary h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +127,11 @@ function Booking() {
           // onChange={(date) => setStartDate(date)}
           dateFormat="yyyy/MM/dd"
         />
-        <label className="font-semibold flex text-gray-200 gap-3 pb-3 ">
+        <label
+          data-aos="fade-up"
+          data-aos-duration="600"
+          className="font-semibold flex text-gray-200 gap-3 pb-3 "
+        >
           <svg
             className="fill-color-primary h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"

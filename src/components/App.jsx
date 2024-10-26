@@ -1,5 +1,4 @@
-import "../App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./Homepage";
 import Booking from "./Booking";
 import BookingGuide from "./BookingGuide";
@@ -9,29 +8,53 @@ import Testimonial from "./Testimonial";
 import FAQs from "./FAQs";
 import Footer from "./Footer";
 import BranchesMap from "./BranchesMap";
+import GoUp from "./GoUp";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      once: false, // Only animate once per element
+    });
+  }, []);
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Homepage />
-              <Booking />
-              <BookingGuide />
-              <VehicleModels />
-              <WhyUs />
-              <BranchesMap />
-              <Testimonial />
-              <FAQs />
-              <Footer />
-            </>
-          }
-        ></Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="relative">
+      <Homepage />
+      <Booking />
+      <BookingGuide />
+      <VehicleModels />
+      <WhyUs />
+      <BranchesMap />
+      <Testimonial />
+      <FAQs />
+      <Footer />
+      <GoUp />
+    </div>
+
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route
+    //       path="/"
+    //       element={
+    //         <>
+    //           <Homepage />
+    //           <Booking />
+    //           <BookingGuide />
+    //           <VehicleModels />
+    //           <WhyUs />
+    //           <BranchesMap />
+    //           <Testimonial />
+    //           <FAQs />
+    //           <Footer />
+    //         </>
+    //       }
+    //     ></Route>
+    //   </Routes>
+    // </BrowserRouter>
   );
 }
 

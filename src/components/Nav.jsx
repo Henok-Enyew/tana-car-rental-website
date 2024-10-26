@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 function Nav() {
-  const [showNav, setShowNav] = useState(true);
+  const [showNav, setShowNav] = useState(false);
 
   return (
     <nav className="w-full border-b-[1px] border-b-gray-800 h-20 pr-4 flex justify-between items-center bg-primary-bg ">
-      <NavLink to="/">
+      {/* <NavLink to="/">
+      <img src="/assets/logo.png" alt="logo" className="w-24 z-40" />
+      </NavLink> */}
+      <a href="#home">
         <img src="/assets/logo.png" alt="logo" className="w-24 z-40" />
-      </NavLink>
+      </a>
       <div
         className={`h-screen w-1/2 absolute duration-700 bg-gray-900 text-color-primary border-r-4 rounded-r-3xl border-color-primary-l
            flex flex-col items-center justify-center text-xl font-semibold top-0 left-0 z-10 ${
