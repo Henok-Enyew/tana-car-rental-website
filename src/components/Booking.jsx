@@ -3,7 +3,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 function Booking() {
   return (
-    <div className="bg-primary-bg px-6">
+    <div className="bg-primary-bg px-6" id="booking">
       <h2 className="font-semibold text-xl text-gray-200 pb-4">Book a car</h2>
 
       <form action="">
@@ -22,7 +22,7 @@ function Booking() {
           id=""
           className="bg-primary-bg text-gray-400 border-b-[1px] border-gray-500 rounded-sm mb-6 w-60"
         >
-          <option value="" selected={true}>
+          <option value="" selected>
             Select your car type
           </option>
           <option value="">Toyota Land Cruiser</option>

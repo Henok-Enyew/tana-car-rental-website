@@ -1,6 +1,6 @@
 function WhyUs() {
   return (
-    <div className="bg-primary-bg text-center text-gray-200 ">
+    <div className="bg-primary-bg text-center text-gray-200 " id="whyus">
       <div className="bg-gray-950 h-40 text-center py-4 px-4">
         <h2 className="font-semibold text-3xl text-gray-200">
           Save big with our cheap car rental!

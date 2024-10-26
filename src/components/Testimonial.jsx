@@ -1,6 +1,9 @@
 function Testimonial() {
   return (
-    <div className="bg-primary-bg pb-14 px-4 text-center text-gray-200 py-20">
+    <div
+      className="bg-primary-bg pb-14 px-4 text-center text-gray-200 py-20"
+      id="testimonials"
+    >
       <h3 className="font-semibold mb-2">Reviewd by people</h3>
       <h2 className="font-semibold text-3xl mb-10">
         Client&apos;s Testinomials

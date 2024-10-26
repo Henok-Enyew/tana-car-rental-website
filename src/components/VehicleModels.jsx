@@ -1,6 +1,9 @@
 function VehicleModels() {
   return (
-    <div className="bg-primary-bg pb-14 px-4 text-center text-gray-200">
+    <div
+      className="bg-primary-bg pb-14 px-4 text-center text-gray-200"
+      id="models"
+    >
       <h3 className="font-semibold mb-2">Vehicle Models</h3>
       <h2 className="font-semibold text-3xl mb-5"> Our rental fleet</h2>
       <p className="text-xs px-3 text-gray-400">

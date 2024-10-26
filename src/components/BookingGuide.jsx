@@ -1,6 +1,9 @@
 function BookingGuide() {
   return (
-    <div className="bg-primary-bg py-14 px-4 text-center text-gray-200">
+    <div
+      className="bg-primary-bg py-14 px-4 text-center text-gray-200"
+      id="guide"
+    >
       <h3 className="font-semibold mb-2">Plan your trip now</h3>
       <h2 className="font-semibold text-3xl mb-16"> Quick & easy car rental</h2>
 

@@ -3,7 +3,7 @@ import Nav from "./Nav";
 
 function Homepage() {
   return (
-    <main className="bg-primary-bg ">
+    <main className="bg-primary-bg " id="home">
       <Nav />
       <Hero />
     </main>

@@ -8,6 +8,11 @@
   font-family: "Rubik", sans-serif;
 }
 
+body {
+  @apply !scroll-smooth;
+  /* scroll-behavior: smooth; */
+}
+
 .btn-vehicle {
   @apply border-[1px] border-gray-500 border-b-[0] px-4 py-2 w-64 text-start font-semibold transition-all duration-300 hover:bg-color-primary hover:text-gray-800;
 }

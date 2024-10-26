@@ -44,7 +44,10 @@ const branches = [
 
 function BranchesMap() {
   return (
-    <div className="bg-primary-bg h-96 w-full relative pt-16 text-center text-gray-200 mb-36">
+    <div
+      className="bg-primary-bg h-96 w-full relative pt-16 text-center text-gray-200 mb-36"
+      id="branchs"
+    >
       <h3 className="font-semibold mb-2">Branches</h3>
       <h2 className="font-semibold text-3xl mb-5">
         Discover Our Branches and Unlock Nearby Adventures!
