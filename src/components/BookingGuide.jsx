@@ -1,18 +1,21 @@
 function BookingGuide() {
   return (
     <div
-      className="bg-primary-bg py-14 px-4 text-center text-gray-200"
+      className="bg-primary-bg py-14 px-4 text-center text-gray-200 lg:mt-20"
       id="guide"
     >
-      <h3 data-aos="fade-up" className="font-semibold mb-2">
+      <h3 data-aos="fade-up" className="font-semibold mb-2 sm:text-lg">
         Plan your trip now
       </h3>
-      <h2 data-aos="fade-up" className="font-semibold text-3xl mb-16">
+      <h2
+        data-aos="fade-up"
+        className="font-semibold text-3xl mb-16 sm:text-4xl"
+      >
         {" "}
         Quick & easy car rental
       </h2>
 
-      <div className="flex flex-col items-center justify-center w-full">
+      <div className="flex flex-col items-center justify-center w-full lg:flex-row">
         <Guide
           icon={
             <svg
@@ -100,13 +103,17 @@ function Guide({ icon, header, body }) {
   return (
     <div
       data-aos="fade-up"
-      className="flex flex-col items-center justify-center w-full mb-20"
+      className="flex flex-col items-center justify-center w-full mb-20 lg:px-8"
     >
       <div className="bg-color-primary-light z-10 w-fit p-3 rounded-full mb-8">
         {icon}
       </div>
-      <h3 className="text-xl font-semibold">{header}</h3>
-      <p className="text-xs px-3 text-gray-400">{body}</p>
+      <h3 className="text-xl font-semibold sm:text-2xl lg:text-3xl ">
+        {header}
+      </h3>
+      <p className="text-xs px-3 text-gray-400 sm:text-sm lg:text-base">
+        {body}
+      </p>
     </div>
   );
 }

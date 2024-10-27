@@ -29,23 +29,29 @@ function FAQs() {
   }
   return (
     <div
-      className="bg-primary-bg py-14 px-4 text-center text-gray-200"
+      className="bg-primary-bg py-14 px-4 text-center text-gray-200 lg:px-72"
       id="faqs"
     >
-      <h3 data-aos="fade-up" className="font-semibold mb-2 tracking-7">
+      <h3
+        data-aos="fade-up"
+        className="font-semibold mb-2 tracking-7 sm:text-lg"
+      >
         FAQ
       </h3>
       <h2
         data-aos="fade-up"
-        className="font-semibold text-3xl mb-6 tracking-wider"
+        className="font-semibold text-3xl mb-6 tracking-wider sm:text-4xl"
       >
         Frequently Asked Questions
       </h2>
-      <p data-aos="fade-up" className="text-sm px-3 text-gray-400">
+      <p
+        data-aos="fade-up"
+        className="text-sm px-3 text-gray-400 sm:text-lg lg:text-xl"
+      >
         Frequently asked questions about the car rental booking process on our
         website. Answers to common concerns and inqueiries
       </p>
-      <div data-aos="fade-up" className="text-justify mt-14">
+      <div data-aos="fade-up" className="text-justify mt-14 sm:px-8">
         {faqs.map((faq, i) => (
           <div key={i} className="border-b border-gray-700 py-2">
             {/* Question Header */}
@@ -56,12 +62,12 @@ function FAQs() {
                 showIndex == i ? "border-b-4 border-color-primary-l " : ""
               } `}
             >
-              <p>
+              <p className="sm:text-lg lg:text-xl">
                 {i + 1}. {faq.question}
               </p>
               <svg
                 className={`fill-color-primary h-6 w-6 transform transition-transform duration-200 ${
-                  showIndex === i ? "rotate-180 fill-gray-900" : ""
+                  showIndex === i ? "rotate-180 fill-color-primary" : ""
                 }`}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 256 256"
@@ -70,13 +76,12 @@ function FAQs() {
               </svg>
             </div>
 
-            {/* Answer Section with Smooth Transition */}
             <div
               className={`overflow-hidden transition-all duration-300 ${
                 showIndex === i ? "max-h-40" : "max-h-0"
               }`}
             >
-              <p className="text-sm text-gray-400 pl-4 pt-2 pb-3">
+              <p className="text-sm text-gray-400 pl-4 pt-2 pb-3 sm:text-base lg:text-lg">
                 {faq.answer}
               </p>
             </div>

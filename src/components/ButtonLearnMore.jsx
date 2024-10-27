@@ -3,7 +3,7 @@ function ButtonLearnMore() {
     <a
       data-aos="fade-left"
       href="#guide"
-      className="bg-gray-100 text-gray-900 flex items-center gap-2 px-11 py-2"
+      className="bg-gray-100 text-gray-900 flex items-center gap-2 px-11 py-2 sm:px-16 sm:py-3 sm:text-lg"
     >
       Learn more{" "}
       <svg

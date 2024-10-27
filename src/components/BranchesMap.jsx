@@ -57,20 +57,23 @@ const branches = [
 function BranchesMap() {
   return (
     <div
-      className="bg-primary-bg h-96 w-full relative pt-16 text-center text-gray-200 mb-36"
+      className="bg-primary-bg h-96 lg:h-[440px] w-full relative pt-16 text-center text-gray-200 mb-36 lg:mt-20"
       id="branchs"
     >
-      <h3 data-aos="fade-up" className="font-semibold mb-2">
+      <h3 data-aos="fade-up" className="font-semibold mb-2 sm:text-lg">
         Branches
       </h3>
-      <h2 data-aos="fade-up" className="font-semibold text-3xl mb-5">
+      <h2
+        data-aos="fade-up"
+        className="font-semibold text-3xl mb-5 sm:text-4xl px-3 sm:px-8 "
+      >
         Discover Our Branches and Unlock Nearby Adventures!
       </h2>
       <MapContainer
         center={[9.028865339591997, 38.75221252441407]}
         zoom={5}
         scrollWheelZoom={true}
-        className="h-full w-full"
+        className="h-full w-full "
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

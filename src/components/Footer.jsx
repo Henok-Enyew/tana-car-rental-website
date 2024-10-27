@@ -2,10 +2,10 @@ function Footer() {
   return (
     <div
       data-aos="fade-up"
-      className="bg-gray-950 py-5 px-4 text-gray-400 text-sm grid grid-cols-3 gap-2
+      className="bg-gray-950 py-5 px-4 text-gray-400 text-sm grid grid-cols-3 gap-2 lg:px-60 lg:grid-cols-3 lg:items-start lg:py-10
     "
     >
-      <div className="col-span-2 pr-4">
+      <div className="col-span-2 pr-4 lg:col-span-1">
         <h3 className="text-lg uppercase text-gray-300 font-semibold mb-2 ">
           Subscription
         </h3>
@@ -32,8 +32,8 @@ function Footer() {
         <p className="mb-2">Blog</p>
         <p className="mb-2">How we work</p>
       </div>
-      <div className="col-span-3 px-2">
-        <h1 className="text-lg uppercase text-gray-300 font-semibold mb-2 mt-4 text-center">
+      <div className="col-span-3 px-2 lg:col-span-1">
+        <h1 className="text-lg uppercase text-gray-300 font-semibold mb-2 mt-4 text-center lg:mt-0 lg:text-start">
           <span> Tana Car</span> Rental
         </h1>
         <p>
