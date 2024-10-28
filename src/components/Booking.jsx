@@ -145,7 +145,7 @@ function Booking() {
           </label>
           <DatePicker
             className="bg-primary-bg text-gray-400 border-b-[1px] border-gray-500 rounded-sm w-60 sm:w-full mb-6 "
-            selected={pickUpDate}
+            selected={pickUpDate ?? new Date()}
             onChange={(date) => setPickUpDate(date)}
             dateFormat="yyyy/MM/dd"
             minDate={new Date()}
@@ -169,7 +169,7 @@ function Booking() {
           <DatePicker
             className="bg-primary-bg text-gray-400 border-b-[1px] border-gray-500 rounded-sm w-60 sm:w-full mb-6 "
             onChange={(date) => setDropOffDate(date)}
-            selected={dropOffDate}
+            selected={dropOffDate ?? new Date()}
             dateFormat="yyyy/MM/dd"
             minDate={new Date()}
           />

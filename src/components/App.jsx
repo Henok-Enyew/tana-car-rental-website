@@ -13,6 +13,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import { useEffect } from "react";
 import { CarProvider } from "../contexts/CarProvider";
+import LogoMarquee from "./LogoMarqueue";
 
 function App() {
   // useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
     <CarProvider>
       <div className="relative bg-primary-bg">
         <Homepage />
+        <LogoMarquee />
         <Booking />
         <BookingGuide />
         <VehicleModels />

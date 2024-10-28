@@ -37,7 +37,9 @@ html {
 .leaflet-popup-content-wrapper {
   @apply border-l-4 border-color-primary;
 }
-
+.marq {
+  @apply flex gap-0;
+}
 /*
 #ADD8E6
 #87CEEB
