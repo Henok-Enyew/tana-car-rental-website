@@ -86,11 +86,6 @@ function BranchesMap() {
             </Popup>
           </Marker>
         ))}
-        {/* <Marker position={[9.028865339591997, 38.75221252441407]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker> */}
       </MapContainer>
     </div>
   );
